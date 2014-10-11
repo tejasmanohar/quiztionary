@@ -5,5 +5,5 @@ require 'bundler'
 Bundler.require
 
 get '/' do
-  "Hello World!"
+  erb :index
 end
