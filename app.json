@@ -1,0 +1,19 @@
+{
+  "name": "Quiztionary",
+  "description": "crowdsourced dictionary powered by quizlet",
+  "keywords": ["ruby", "sinatra", "sequel", "dictionary", "quizlet"],
+
+  "website": "http://quiztionary.herokuapp.com",
+  "repository": "https://github.com/quiztionary/backend",
+  
+  // "env": {
+  //   "YO_API_KEY": {
+  //     "description": "Yo API Key (sign up for one at http://dev.justyo.co)",
+  //     "required": true
+  //   },
+  //   "PUSHER_URL": {
+  //     "description": "Pusher URL (sign up at pusher.com)",
+  //     "required": true
+  //   }
+  // }
+}
