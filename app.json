@@ -5,4 +5,11 @@
 
   "website": "http://quiztionary.herokuapp.com",
   "repository": "https://github.com/quiztionary/backend",
+
+  "env": {
+    "KEY": {
+      "description": "Quizlet client API key",
+      "required": true
+    }
+  }
 }
