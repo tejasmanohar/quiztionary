@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Quiztionary</title>
+  <title>Quiztionary - <%= params[:q] %></title>
   <meta name="description" content="Quiztionary is a crowdsourced dictionary powered by Quizlet">
 
   <link rel="icon" type="image/png" href="favicon.png">
@@ -42,12 +42,13 @@
           <br><small><br></small>
           <small>Crowdsourced dictionary powered by <a target="_blank" href="https://quizlet.com">Quizlet</a></small>
         </h1>
-      <form role="search" action="/search">
+        
+<!--       <form role="search" action="/search">
         <div class="form-group">
           <input name="q" type="text" class="form-control" placeholder="Search" style="margin-top: 7%; margin-right: 3px; width: calc(100% - 100px); float: left">
         </div>
         <button type="submit" class="btn btn-default" style="margin-top: 7%; width: 97px; float: left">Submit</button>
-      </form>
+      </form> -->
     </center>
   </div>
 </body>
