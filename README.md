@@ -1,4 +1,4 @@
-web
+quiztionary
 ====
 
-web for Quiztionary
+Crowdsourced dictionary powered by [Quizlet](https://quizlet.com)
