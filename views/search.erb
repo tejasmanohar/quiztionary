@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>Quiztionary - <%= params[:q] %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Quiztionary is a crowdsourced dictionary powered by Quizlet">
 
   <link rel="icon" type="image/png" href="favicon.png">
@@ -30,9 +31,6 @@
           <li><a target="_blank" href="https://github.com/quiztionary/backend">Source</a></li>
           <li><a href="mailto:contact@quiztionary.com">Contact</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Sign in with Quizlet</a></li>
-        </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -53,6 +51,10 @@
         <button type="submit" class="btn btn-default" style="margin-top: 7%; width: 97px; float: left">Submit</button>
       </form>
     </center>
+  </div>
+  <div class="navbar navbar-fixed-bottom">
+    <p class="navbar-text pull-left">&copy; Copyright 2014 Quiztionary</p>
+    <p class="navbar-text pull-right">Developed by <a target="_blank" href="http://tejasmanohar.com">Tejas Manohar</a></p>
   </div>
 </body>
 </html>
