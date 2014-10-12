@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Quiztionary - <%= params[:q] %></title>
+  <title>Quiztionary - About</title>
   <meta name="description" content="Quiztionary is a crowdsourced dictionary powered by Quizlet">
 
   <link rel="icon" type="image/png" href="favicon.png">
@@ -38,20 +38,9 @@
   </nav>
   <div class="container">
     <center>
-      <% for @item in @results %>
-        <div class="panel panel-default">
-          <div class="panel-heading"><%= @item['word'] %></div>
-          <div class="panel-body">
-            <%= @item['definition'] %>
-          </div>
-        </div>
-      <% end %>
-      <form role="search" action="/search">
-        <div class="form-group">
-          <input name="q" type="text" class="form-control" placeholder="Search" style="margin-top: 7%; margin-right: 3px; width: calc(100% - 100px); float: left">
-        </div>
-        <button type="submit" class="btn btn-default" style="margin-top: 7%; width: 97px; float: left">Submit</button>
-      </form>
+      <div class="jumbotron" style="text-align:center; padding-top:80px; background-color: rgba(0,0,0,0);">
+        <h1>Quiztionary</h1><br><p>Quiztionary is an open-source, crowdsourced <a target="_blank" href="http://quizlet.com">Quizlet</a>-powered dictionary developed by <a href="http://tejasmanohar.com">Tejas Manohar</a>. <br>If you would like to contribute, please open a pull request on <a target="_blank" href="https://github.com/quiztionary/web/compare">Github</a>.</p>
+      </div>
     </center>
   </div>
 </body>

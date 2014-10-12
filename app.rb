@@ -20,6 +20,10 @@ get '/' do
   erb :index
 end
 
+get '/about' do
+  erb :about
+end
+
 # parse and display results from search
 get '/search' do
   word = params[:q]
