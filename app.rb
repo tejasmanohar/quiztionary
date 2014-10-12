@@ -2,6 +2,10 @@
 require 'sinatra'
 require 'json'
 require 'pry' if Sinatra::Base.development?
+require 'bundler'
+
+# ensure gem bundling
+Bundler.require
 
 # search quizlet sets for word's definition
 def get_entries(word)
