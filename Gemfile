@@ -4,8 +4,3 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'sinatra-flash'
 gem 'json'
-
-group :development do
- gem 'rerun'
- gem 'pry'
-end
