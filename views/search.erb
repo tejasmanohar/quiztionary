@@ -1,60 +1,20 @@
-<html>
-<head>
-  <title>Quiztionary - <%= params[:q] %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Quiztionary is a crowdsourced dictionary powered by Quizlet">
-
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/paper/bootstrap.min.css">
-  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Quiztionary</a>
+<center>
+  <% unless @results.nil? %>
+    <% for @item in @results %>
+      <div class="panel panel-default">
+        <div class="panel-heading"><%= @item['word'] %></div>
+        <div class="panel-body">
+          <%= @item['definition'] %>
+        </div>
       </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-left">
-          <li><a href="/about">About</a></li>
-          <li><a target="_blank" href="https://github.com/tejasmanohar/quiztionary">Source</a></li>
-          <li><a href="mailto:contact@quiztionary.com">Contact</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-  <div class="container">
-    <center>
-      <% for @item in @results %>
-        <div class="panel panel-default">
-          <div class="panel-heading"><%= @item['word'] %></div>
-          <div class="panel-body">
-            <%= @item['definition'] %>
-          </div>
-        </div>
-      <% end %>
-      <form role="search" action="/search">
-        <div class="form-group">
-          <input name="q" type="text" class="form-control" placeholder="Search" style="margin-top: 7%; margin-right: 3px; width: calc(100% - 100px); float: left">
-        </div>
-        <button type="submit" class="btn btn-default" style="margin-top: 7%; width: 97px; float: left">Submit</button>
-      </form>
-    </center>
-  </div>
-  <div class="navbar navbar-fixed-bottom">
-    <p class="navbar-text pull-left">&copy; Copyright 2014 Quiztionary</p>
-    <p class="navbar-text pull-right">Developed by <a target="_blank" href="http://tejas.io">Tejas Manohar</a></p>
-  </div>
-</body>
-</html>
+    <% end %>
+  <% else %>
+    <h4>Oops... no results found! Try something else?</h4>
+  <% end %>
+  <form role="search" action="/search">
+    <div class="form-group">
+      <input name="q" type="text" class="form-control" placeholder="Search" style="margin-top: 7%; margin-right: 3px; width: calc(100% - 100px); float: left">
+    </div>
+    <button type="submit" class="btn btn-default" style="margin-top: 7%; width: 97px; float: left">Submit</button>
+  </form>
+</center>
